@@ -1,9 +1,23 @@
-<script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
-</script>
-
 <template>
   <main>
-    <TheWelcome />
+    <!-- <TheWelcome /> -->
+    <div>首页</div>
+    <div @click="toPage('about')">about页</div>
   </main>
 </template>
+<script lang="ts">
+export default {
+  name: 'home'
+}
+</script>
+<script setup lang="ts">
+import { useRouter } from "vue-router";
+import { onActivated } from "vue";
+const router = useRouter();
+const toPage = (pathName: string) => {
+  router.push({ name: pathName });
+};
+onActivated(() => {
+  console.log("触发了路由激活");
+});
+</script>
