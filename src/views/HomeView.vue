@@ -1,14 +1,16 @@
 <template>
   <main>
+    <div class="public-page-contain">
+      <div>首页</div>
+      <div @click="toPage('about')">about页</div>
+    </div>
     <!-- <TheWelcome /> -->
-    <div>首页</div>
-    <div @click="toPage('about')">about页</div>
   </main>
 </template>
 <script lang="ts">
 export default {
-  name: 'home'
-}
+  name: "home",
+};
 </script>
 <script setup lang="ts">
 import { useRouter } from "vue-router";
