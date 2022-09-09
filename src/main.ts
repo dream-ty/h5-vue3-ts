@@ -5,7 +5,7 @@ import router from './router'
 import 'amfe-flexible'
 // 引入全局样式
 import '@/assets/styles/index.scss'
-// import './assets/main.css'
+import.meta.glob('./assets/styles/common/*', { eager: true })
 
 const app = createApp(App)
 
